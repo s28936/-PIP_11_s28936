@@ -1,42 +1,31 @@
-import java.util.*;
-import java.nio.charset.*;
-
+import java.util.Random;
 public class zadanie4 {
     public static void main(String[] args) {
-        /*System.out.println("Jakiej dlugosci ma byc losowy string?");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt(); */
         int n = 5;
         System.out.println(getAlphaNumericString(n));
         }
     public static String getAlphaNumericString(int n)
     {
-
-        // length is bounded by 256 Character
-        byte[] array = new byte[256];
-        new Random().nextBytes(array);
-
-        String randomString = new String(array, Charset.forName("UTF-8"));
-
-        // Create a StringBuffer to store the result
-        StringBuffer r = new StringBuffer();
-
-        // Append alphanumeric characters from the generated random String into the result
-        for (int k = 0; k < randomString.length(); k++) {
-
-            char ch = randomString.charAt(k);
-
-            if (((ch >= 'a' && ch <= 'z')
-                    || (ch >= 'A' && ch <= 'Z')
-                    || (ch >= '0' && ch <= '9'))
-                    && (n > 0)) {
-
-                r.append(ch);
-                n--;
-            }
+        String upperAlfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerAlfabet = "abcdefghijklmnopqrstuvwxyz";
+        String numbers = "0123456789";
+        // laczymy stringi
+        String alphaNumeric = upperAlfabet + lowerAlfabet + numbers;
+        // tworzymy random string buildera
+        StringBuilder sb = new StringBuilder();
+        // tworzymy objekt klasy random
+        Random random = new Random();
+        // specify length of random string
+        int dlugoscRandomStringa = n;
+        for(int i = 0; i < dlugoscRandomStringa; i++) {
+            // tworzymy losowy numer indexu
+            int index = random.nextInt(alphaNumeric.length());
+            // bierzemy znak wskazany przez wygenerowany index w stringu
+            char randomChar = alphaNumeric.charAt(index);
+            // dodajemy wylosowany znak do zmiennej buildera sb
+            sb.append(randomChar);
         }
-
-        // return the resultant string
-        return r.toString();
+        String randomString = sb.toString();
+        return sb.toString();
     }
 }
