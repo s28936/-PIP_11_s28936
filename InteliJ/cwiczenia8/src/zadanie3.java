@@ -7,9 +7,16 @@ public class zadanie3 {
         System.out.println();
         System.out.println("Odwrocona kolejnosc w tablicy:");
         metoda1(tablica);
-    }
-    public static void metoda1(int[] tablica) {
-        for(int i=tablica.length-1;i>=0;i--)
+        for(int i=0;i<tablica.length;i++)
             System.out.print(tablica[i] + "  ");
+    }
+    public static int[] metoda1(int[] tablica) {
+        int temp;
+        for (int i = 0; i < tablica.length / 2; i++) {
+            temp = tablica[i];
+            tablica[i] = tablica[tablica.length - i - 1];
+            tablica[tablica.length - i - 1] = temp;
+        }
+        return tablica;
     }
 }
