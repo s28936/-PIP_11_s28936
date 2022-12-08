@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -5,10 +6,13 @@ public class zadanie4 {
     public static void main(String[] args) {
         int []genArr = generateArray();
         printArray(genArr);
+        System.out.println("Powyzej jest generated array");
         int []sortedArr = sort(genArr);
         printArray(sortedArr);
+        System.out.println("Powyzej jest sorted array");
         int []revArr = reverse(sortedArr);
         printArray(revArr);
+        System.out.println("Powyzej jest reversed array");
         System.out.println(equalsReverse(sortedArr,revArr));
     }
     public static int []generateArray() {
@@ -27,36 +31,41 @@ public class zadanie4 {
             System.out.println(tablica[i]);
     }
     public static int [] sort(int[] tablica) {
-        for (int i = 0; i <tablica.length; i++){
+        int[] kopia = Arrays.copyOf(tablica,tablica.length);
+        for (int i = 0; i <kopia.length; i++){
             int index = i;
-            for (int j = i ; j <= tablica.length-1; j++){
-                if (tablica[j] < tablica[index]){
+            for (int j = i ; j <= kopia.length-1; j++){
+                if (kopia[j] < kopia[index]){
                     index = j;
                 }
             }
-            int temp = tablica[i];
-            tablica[i] = tablica[index];
-            tablica[index] = temp;
+            int temp = kopia[i];
+            kopia[i] = kopia[index];
+            kopia[index] = temp;
         }
-        for (int i = 0; i < tablica.length; i++){
-            System.out.print(tablica[i] + " ");
-        }
-        return tablica;
+        return kopia;
     }
     public static int [] reverse(int[] tablica) {
-        for(int i=tablica.length-1;i>=0;i--)
-            System.out.print(tablica[i] + "  ");
-        return tablica;
+        int[] kopia = Arrays.copyOf(tablica,tablica.length);
+        int temp;
+        for (int i = 0; i < kopia.length / 2; i++) {
+            temp = kopia[i];
+            kopia[i] = kopia[kopia.length - i - 1];
+            kopia[kopia.length - i - 1] = temp;
+        }
+        return kopia;
     }
     public static boolean equalsReverse(int[] tablica1, int[] tablica2) {
         if (tablica1.length != tablica2.length)
         {
+            System.out.println("Blad1");
             return false;
         }
-        for (int i = 0; i < tablica1.length; i++)
-        {
+        int dlugosc = tablica1.length;
+        for (int i = 0; i < dlugosc; i++) {
             if (tablica1[i] != tablica2[tablica2.length - 1 - i])
             {
+                System.out.println("Blad nr" + i);
                 return false;
             }
         }
