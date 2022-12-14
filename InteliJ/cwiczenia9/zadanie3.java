@@ -14,11 +14,11 @@ public class zadanie3 {
         reverse(x, 0, x.length -1);
     }
     public static void reverse(int[] x, int i, int j){
-        if(i<j){//Swap
-            int tmp = x[i];
+        if(i<j){
+            int temp = x[i];
             x[i] = x[j];
-            x[j] = tmp;
-            reverse(x, ++i, --j);//Recursive
+            x[j] = temp;
+            reverse(x, ++i, --j);
         }
     }
 }
