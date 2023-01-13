@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/InteliJ.iml" filepath="$PROJECT_DIR$/InteliJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cwiczenia11/cwiczenia11.iml" filepath="$PROJECT_DIR$/cwiczenia11/cwiczenia11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cwiczenia6/cwiczenia6.iml" filepath="$PROJECT_DIR$/cwiczenia6/cwiczenia6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cwiczenia7/cwiczenia7.iml" filepath="$PROJECT_DIR$/cwiczenia7/cwiczenia7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cwiczenia8/cwiczenia8.iml" filepath="$PROJECT_DIR$/cwiczenia8/cwiczenia8.iml" />
+    </modules>
+  </component>
+</project>
