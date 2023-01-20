@@ -10,7 +10,7 @@ public class Enemy {
     }
     public void attack(Billionaire billionaire){
         Random rand = new Random();
-        int walka = rand.nextInt();
+        double walka = rand.nextDouble();
         if (walka>=0.5){
             billionaire.attacked = true;
             System.out.println("Watch out "+billionaire.billName+" "+billionaire.billSurname+". I'll kill you!");
