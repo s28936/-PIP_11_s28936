@@ -11,11 +11,12 @@ public class Main {
         String imie = "Patryk Maliszewski";
         String mail = "patryk.maliszewski@gmail.com";
         String kraj = "Polska";
-        Osoba osoba = new Osoba(imie, mail, kraj);
-        System.out.println(osoba);
+        Osoba person = new Osoba(imie, mail, kraj);
+        System.out.println(person);
         //zad2
         List<String> listOfStrings = new ArrayList<String>();
-        BufferedReader reader = new BufferedReader(new FileReader("src/data.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\s28936\\Documents\\GitHub\\PIP_11_s28936\\InteliJ\\cwiczenia14\\src\\data.txt"));
+        //absolute path bo nie działało z samym src/data.txt
         String line = reader.readLine();
         while (line != null) {
             listOfStrings.add(line);
@@ -23,14 +24,12 @@ public class Main {
         }
         reader.close();
         String[] array = listOfStrings.toArray(new String[0]);
-        for (String str : array) {
-            System.out.println(str);
-        }
-        String[][] tablica2d = new String[10][3];
+
+        String[][] Osoba = new String[10][3];
         for (int i=0; i< array.length; i++){
-            tablica2d[i] = splitBy(array[i],",");
+            Osoba[i] = splitBy(array[i],",");
         }
-        System.out.println(Arrays.deepToString(tablica2d));
+        System.out.println(Arrays.deepToString(Osoba));
     }
     public static String[] splitBy(String line, String separator){
         String[] tablica = line.split(separator);
