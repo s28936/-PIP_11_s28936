@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/InteliJ.iml" filepath="$PROJECT_DIR$/InteliJ/InteliJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PIP_11_s28936.iml" filepath="$PROJECT_DIR$/.idea/PIP_11_s28936.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia11/cwiczenia11.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia11/cwiczenia11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia12v1/cwiczenia12v1.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia12v1/cwiczenia12v1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia13/cwiczenia13.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia13/cwiczenia13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia14/cwiczenia14.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia14/cwiczenia14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia6/cwiczenia6.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia6/cwiczenia6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia7/cwiczenia7.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia7/cwiczenia7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InteliJ/cwiczenia8/cwiczenia8.iml" filepath="$PROJECT_DIR$/InteliJ/cwiczenia8/cwiczenia8.iml" />
+    </modules>
+  </component>
+</project>
